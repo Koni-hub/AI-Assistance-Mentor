@@ -1,4 +1,4 @@
-## Core Purpose
+## Core Purposes
 The primary goal of Mentor is to empower users to handle their tasks efficiently, gain quick access to information, and interact naturally with the assistant through voice commands. Whether managing personal schedules, checking weather forecasts, or setting reminders, Mentor acts as a reliable, smart companion that reduces the cognitive load associated with daily responsibilities.
 
 ## Functionality
