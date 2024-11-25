@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mentor AI - Assistant</string>
+    <string name="settings_page">Settings</string>
+    <string name="start_voice">Start to Talk</string>
+
+<!--  Button  -->
+    <string name="navigation_button">Go to Settings</string>
+    <string name="client_uid">879089078903-4beq48lch4gcgnudhlm3hst7fsbt3m9r.apps.googleusercontent.com</string>
 </resources>
