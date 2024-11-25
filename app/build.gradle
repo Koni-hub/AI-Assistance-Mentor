@@ -11,11 +11,15 @@ android {
         minSdk 24
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "GEMINI_API_KEY", "\"${GEMINI_API_KEY}\""
     }
 
+    buildFeatures {
+        buildConfig true  // Enable BuildConfig feature
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -26,13 +30,52 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        // You can exclude other files as necessary
+        // exclude 'META-INF/LICENSE'
+        // exclude 'META-INF/LICENSE.txt'
+        // exclude 'META-INF/NOTICE'
+    }
 }
 
 dependencies {
 
-    implementation libs.appcompat
-    implementation libs.material
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
-    androidTestImplementation libs.espresso.core
+    // Core Android libraries
+    implementation libs.appcompat // Provides backward-compatible versions of Android UI components (e.g., ActionBar, AppCompatActivity)
+    implementation libs.material // Provides Material Design components for modern UI elements
+
+    // Unit testing libraries
+    testImplementation libs.junit // JUnit is a testing framework for unit tests
+    androidTestImplementation libs.ext.junit // Extensions for JUnit to run tests on Android
+    androidTestImplementation libs.espresso.core // Library for UI testing and interaction with Android views
+
+    // Retrofit for network requests
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Retrofit is used for making API requests and parsing responses
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // Gson converter for Retrofit to handle JSON serialization and deserialization
+
+    // TensorFlow Lite for machine learning on Android
+    implementation 'org.tensorflow:tensorflow-lite:2.9.0' // TensorFlow Lite is for running machine learning models on mobile devices
+
+    // Google AI SDK for integrating AI features
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0") // SDK for integrating Google's Generative AI model capabilities
+
+    // Required for ListenableFuture, used for asynchronous operations in Android
+    implementation("com.google.guava:guava:31.0.1-android") // Provides utilities like ListenableFuture for async tasks and collections
+
+    // Reactive Streams for asynchronous operations
+    implementation("org.reactivestreams:reactive-streams:1.0.4") // Provides support for reactive programming with streams
+
+    // Google Play Services Auth for user authentication
+    implementation 'com.google.android.gms:play-services-auth:20.3.0' // Allows authentication with Google accounts (e.g., login, sign up)
+
+    // Google API Client for accessing Google services
+    implementation 'com.google.api-client:google-api-client-android:1.34.0' // Client for interacting with Google's REST APIs (e.g., Google Cloud, Drive)
+
+    // Google HTTP Client for making HTTP requests with GSON conversion
+    implementation 'com.google.http-client:google-http-client-gson:1.41.1' // Used for making HTTP requests with automatic Gson conversion for JSON
+
+    // OkHttp for network requests (alternative to Retrofit)
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0' // OkHttp is a lower-level HTTP client that you can use for direct API calls and streaming
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'  // Or the latest version available
 }
