@@ -1,15 +1,58 @@
-*.iml
-.gradle
-/local.properties
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (should be kept secret)
+local.properties
+
+# Log files
+*.log
+
+# Android Studio specific files
+/.idea/
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# macOS specific files
 .DS_Store
-/build
+
+# Windows thumbnail database files
+Thumbs.db
+
+# Compiled Java classes
+*.class
+
+# Generated files
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+generated/
+output/
+
+# IntelliJ IDEA project files
+*.iml
+
+# Gradle Wrapper
+/gradlew
+/gradlew.bat
+/gradle-wrapper.properties
+/gradle-wrapper.jar
+
+# Miscellaneous
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+
+# Exclude build.gradle, settings.gradle, and other important configuration files
+!build.gradle
+!settings.gradle
