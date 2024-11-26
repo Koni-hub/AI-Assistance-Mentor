@@ -41,6 +41,7 @@ output/
 *.iml
 
 # Gradle Wrapper
+/gradle
 /gradlew
 /gradlew.bat
 /gradle-wrapper.properties
