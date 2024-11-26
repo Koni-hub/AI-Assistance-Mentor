@@ -1,5 +1,5 @@
 # Gradle files
-./gradle.properties
+gradle.properties
 .gradle/
 build/
 
@@ -10,15 +10,15 @@ local.properties
 *.log
 
 # Android Studio specific files
-/.idea/
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+.idea/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
 
-# Keystore files
+# Keystore files (private keys, should never be shared)
 *.jks
 *.keystore
 
@@ -31,10 +31,10 @@ Thumbs.db
 # Compiled Java classes
 *.class
 
-# Generated files
-/captures
-.externalNativeBuild
-.cxx
+# Generated files and intermediate build files
+captures/
+.externalNativeBuild/
+.cxx/
 generated/
 output/
 
@@ -42,19 +42,19 @@ output/
 *.iml
 
 # Gradle Wrapper
-/gradle
-/gradlew
-/gradlew.bat
-/gradle-wrapper.properties
-/gradle-wrapper.jar
+gradle/
+gradlew
+gradlew.bat
+gradle-wrapper.properties
+gradle-wrapper.jar
 
-# Miscellaneous
+# Miscellaneous temporary or backup files
 *.bak
 *.tmp
 *.swp
 *.swo
 *.orig
 
-# Exclude build.gradle, settings.gradle, and other important configuration files
+# Include critical Gradle configuration files explicitly
 !build.gradle
 !settings.gradle
